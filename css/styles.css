@@ -601,6 +601,8 @@ img {
   margin-right: 70px;
 }
 
+/* Footer logotype styles */
+
 .logotype-bottom {
   display: inline-block;
   margin-bottom: 20px;
@@ -623,8 +625,14 @@ img {
   color: var(--text-colour-tertiary);
 }
 
+/* Footer address group styles */
+
 .address {
   font-style: normal;
+}
+
+.address-item {
+  width: 231px;
 }
 
 .map {
@@ -680,6 +688,10 @@ img {
 
 /* Footer network styles */
 
+.socials {
+  margin-right: 93px;
+}
+
 .socials-title {
   margin-top: 0;
   margin-bottom: 20px;
@@ -722,6 +734,88 @@ img {
 .social-networks .icon {
   fill: currentColor;
 }
+
+/* Footer subscription styles */
+
+.subscription-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--text-colour-tertiary);
+}
+
+.subscription-form {
+  display: flex;
+}
+
+input {
+  padding: 15px;
+
+  width: 358px;
+
+  color: var(--text-colour-tertiary);
+  background-color: var(--bgc-secondary);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+  padding: 10px 28px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--text-colour-tertiary);
+  background-color: var(--accent-colour);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subscription-icon {
+  width: 24px;
+  height: 24px;
+
+  margin-left: 10px;
+
+  fill: currentColor;
+}
+
+/* .subscription-button::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+
+  margin-left: 10px;
+
+  background-image: url(../images/icons.svg#icon-send);
+  fill: var(--icons-colour-hover);
+} */
 
 /* Portfolio styles */
 /* Projects styles */
