@@ -421,8 +421,8 @@
             >Web<span class="logo-second-piece">Studio</span>
           </a>
           <address class="address">
-            <ul class="connection list">
-              <li>
+            <ul class="list">
+              <li class="address-item">
                 <a
                   href="https://goo.gl/maps/ToiSX3L1xAdF7Vyq6"
                   target="_blank"
@@ -431,12 +431,12 @@
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
-              <li>
+              <li class="address-item">
                 <a href="mailto:info@devstudio.com" class="mail"
                   >info@devstudio.com</a
                 >
               </li>
-              <li>
+              <li class="address-item">
                 <a href="tel:+380961111111" class="phone">+38 096 111 11 11</a>
               </li>
             </ul>
@@ -476,9 +476,45 @@
             </li>
           </ul>
         </div>
+        <!-- Підписка -->
+        <div class="subscription">
+          <h3 class="subscription-title">Підпишіться на розсилку</h3>
+          <form class="subscription-form">
+            <input
+              type="email"
+              name="user-email"
+              id=""
+              aria-describedby="user-email"
+              placeholder="E-mail"
+            />
+            <button
+              class="subscription-button"
+              type="button"
+              aria-label="Підписатися"
+            >
+              Підписатися
+              <svg class="subscription-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document
+          .querySelector(".subscription-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+          });
+      })();
+    </script>
   </body>
 </html>
