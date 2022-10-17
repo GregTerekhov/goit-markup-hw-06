@@ -373,11 +373,8 @@ img {
 /* Title */
 
 .modal-form-call {
-  font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: inherit;
+  line-height: 1.172;
 
   margin-top: 0;
   margin-bottom: 12px;
@@ -451,6 +448,7 @@ img {
   display: block;
 
   width: 100%;
+  height: 120px;
   padding: 12px 16px;
 
   font-family: inherit;
