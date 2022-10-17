@@ -460,8 +460,10 @@ img {
 /* Placeholder */
 
 input::placeholder {
+  margin: 0;
+
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.172;
   letter-spacing: 0.01em;
 
   color: var(--input-placeholder-colour);
