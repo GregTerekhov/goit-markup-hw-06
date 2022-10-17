@@ -511,10 +511,8 @@ input::placeholder {
 }
 
 .checkbox-input:checked + .checkbox-icon {
-  border-color: var(--accent-colour);
+  border: none;
   background-color: var(--accent-colour);
-  background-origin: border-box;
-  background-size: contain;
 }
 
 .checkbox-contract-terms {
