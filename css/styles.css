@@ -508,16 +508,13 @@ input::placeholder {
 
   border: 2px solid var(--text-colour-primary);
   border-radius: 3px;
-
-  transition: background-color 250ms var(--timing-function);
 }
 
 .checkbox-input:checked + .checkbox-icon {
   border-color: var(--accent-colour);
   background-color: var(--accent-colour);
-  background-image: url("../images/icon-checked.svg");
-  background-size: contain;
   background-origin: border-box;
+  background-size: contain;
 }
 
 .checkbox-contract-terms {
