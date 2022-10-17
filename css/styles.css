@@ -1017,11 +1017,13 @@ input::placeholder {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .subscription-button:hover,
 .subscription-button:focus {
-  background: var(--accent-colour-button-hover);
+  background: var(--accent-button-hover-colour);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
