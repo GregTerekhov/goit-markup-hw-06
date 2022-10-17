@@ -331,12 +331,6 @@ img {
   transform: translate(-50%, -50%) scale(0.5);
 }
 
-.modal-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* Close button */
 
 .modal-button-close {
@@ -360,12 +354,20 @@ img {
   transition: color 250ms var(--timing-function);
 }
 
-.modal-button-close:hover {
+.modal-button-close:hover,
+.modal-button-close:focus {
   color: var(--accent-colour);
 }
 
 .modal-button-close .icon {
   fill: currentColor;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Title */
@@ -383,17 +385,16 @@ img {
 
 /* Inputs */
 
-.modal-form-field {
-  position: relative;
-
+.modal-fields-input {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  gap: 10px;
 
   width: 100%;
 }
 
 .modal-field-name {
+  display: block;
   margin-top: 0;
   margin-bottom: 4px;
 
@@ -404,9 +405,15 @@ img {
   color: var(--text-colour-secondary);
 }
 
+.modal-field-block {
+  position: relative;
+}
+
 .modal-field-input {
+  display: block;
   margin: 0;
   padding: 12px 12px 12px 42px;
+  width: 100%;
 
   font-size: 12px;
 
@@ -432,21 +439,23 @@ img {
 
 .modal-field-input ~ .field-icon {
   position: absolute;
-  top: 29px;
+  top: 50%;
   left: 12px;
+
+  transform: translateY(-50%);
 }
 
 /* Textarea */
 
 .modal-textarea-input {
-  display: flex;
-  flex-direction: column;
+  display: block;
 
   width: 100%;
   padding: 12px 16px;
 
   font-family: inherit;
   font-size: 12px;
+  line-height: 1.172;
 
   resize: none;
   background-color: var(--bgc-primary);
@@ -460,6 +469,7 @@ img {
 
 input::placeholder {
   margin: 0;
+  padding: 0;
 
   font-size: 12px;
   line-height: 1.172;
@@ -471,7 +481,7 @@ input::placeholder {
 /* Checkbox */
 
 .modal-checkbox {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
@@ -499,7 +509,7 @@ input::placeholder {
   margin-right: 7px;
 
   border: 2px solid var(--text-colour-primary);
-  border-radius: 4px;
+  border-radius: 3px;
 
   transition: background-color 250ms var(--timing-function);
 }
