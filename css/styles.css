@@ -1,23 +1,25 @@
 :root {
   --accent-colour: #2196f3;
-  --accent-colour-button-hover: #188ce8;
-  --accent-colour-projects-overlay: rgba(33, 150, 243, 0.9);
+  --accent-button-hover-colour: #188ce8;
+  --accent-projects-overlay-colour: rgba(33, 150, 243, 0.9);
   --bgc-primary: #ffffff;
   --bgc-secondary: #2f303a;
   --bgc-tertiary: #f5f4fa;
   --bgc-footer-network: rgba(255, 255, 255, 0.1);
   --bgc-overlay-modal: rgba(0, 0, 0, 0.2);
-  --border-colour-header: #ececec;
-  --border-colour-block: #eeeeee;
+  --border-button-close-colour: rgba(0, 0, 0, 0.1);
+  --border-header-colour: #ececec;
+  --border-projectblock-colour: #eeeeee;
   --button-close-colour: #000000;
-  --colour-hero-gradient: rgba(47, 48, 58, 0.4);
-  --colour-item: #afb1b8;
-  --icons-colour-hover: #ffffff;
+  --gradient-hero-colour: rgba(47, 48, 58, 0.4);
+  --icons-hover-colour: #ffffff;
+  --input-placeholder-colour: rgba(117, 117, 117, 0.5);
+  --link-nonactive-colour: #afb1b8;
   --text-colour-primary: #212121;
   --text-colour-secondary: #757575;
   --text-colour-tertiary: #ffffff;
-  --text-colour-contacts-footer: rgba(255, 255, 255, 0.6);
-  --text-colour-logo: #000000;
+  --text-contacts-footer-colour: rgba(255, 255, 255, 0.6);
+  --text-logo-colour: #000000;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -73,10 +75,10 @@ img {
   overflow: hidden;
 }
 
-/* header styles */
+/* -------Header styles--------- */
 
 .header {
-  border-bottom: 1px solid var(--border-colour-header);
+  border-bottom: 1px solid var(--border-header-colour);
 }
 
 .pagination {
@@ -101,7 +103,7 @@ img {
   font-size: 26px;
   line-height: 1.19;
 
-  color: var(--text-colour-logo);
+  color: var(--text-logo-colour);
 }
 
 .nav-pages {
@@ -204,8 +206,8 @@ img {
   fill: currentColor;
 }
 
-/* Webstudio styles */
-/* Hero styles */
+/* ===========Webstudio styles============== */
+/* ----------Hero styles------------ */
 
 .hero {
   text-align: center;
@@ -220,8 +222,8 @@ img {
   margin-right: auto;
 
   background-image: linear-gradient(
-      var(--colour-hero-gradient),
-      var(--colour-hero-gradient)
+      var(--gradient-hero-colour),
+      var(--gradient-hero-colour)
     ),
     url("../images/meeting-bgd.jpg");
   background-position: center;
@@ -271,11 +273,12 @@ img {
 
 .button-hero:hover,
 .button-hero:focus {
-  background: var(--accent-colour-button-hover);
+  background: var(--accent-button-hover-colour);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Modal-window styles */
+/* --------Modal-window styles---------- */
+/* Backdrop */
 
 .backdrop {
   position: fixed;
@@ -296,6 +299,8 @@ img {
   opacity: 0;
   pointer-events: none;
 }
+
+/* Container */
 
 .modal-form-container {
   position: absolute;
@@ -325,6 +330,8 @@ img {
   align-items: center;
 }
 
+/* Close button */
+
 .modal-button-close {
   position: absolute;
   top: 8px;
@@ -340,8 +347,10 @@ img {
   background-color: var(--bgc-primary);
 
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-button-close-colour);
   border-radius: 50%;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .modal-button-close:hover {
@@ -351,6 +360,8 @@ img {
 .modal-button-close .icon {
   fill: currentColor;
 }
+
+/* Title */
 
 .modal-form-call {
   font-weight: 700;
@@ -362,6 +373,8 @@ img {
   margin-top: 0;
   margin-bottom: 12px;
 }
+
+/* Inputs */
 
 .modal-form-field {
   position: relative;
@@ -392,12 +405,18 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms var(--timing-function);
 }
 
 .modal-field-input:focus,
 .modal-textarea-input:focus {
   border: 1px solid var(--accent-colour);
   outline: none;
+}
+
+.field-icon {
+  transition: fill 250ms var(--timing-function);
 }
 
 .modal-field-input:focus ~ .field-icon {
@@ -409,6 +428,8 @@ img {
   top: 29px;
   left: 12px;
 }
+
+/* Textarea */
 
 .modal-textarea-input {
   display: flex;
@@ -424,15 +445,21 @@ img {
   background-color: var(--bgc-primary);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms var(--timing-function);
 }
+
+/* Placeholder */
 
 input::placeholder {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--input-placeholder-colour);
 }
+
+/* Checkbox */
 
 .modal-checkbox {
   margin-top: 10px;
@@ -442,7 +469,6 @@ input::placeholder {
 .chexbox-label {
   display: flex;
   align-items: center;
-
   font-size: 14px;
   line-height: 1.71;
 
@@ -450,17 +476,11 @@ input::placeholder {
 }
 
 .checkbox-input {
+  position: absolute;
+
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
-  position: absolute;
-  margin-right: 7px;
-}
-
-.checkbox-input:checked + .checkbox-icon {
-  background-color: var(--accent-colour);
-  background-image: url();
 }
 
 .checkbox-icon {
@@ -471,8 +491,26 @@ input::placeholder {
 
   border: 2px solid var(--text-colour-primary);
   border-radius: 4px;
+
+  transition: background-color 250ms var(--timing-function);
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  border-color: var(--accent-colour);
+  background-color: var(--accent-colour);
+  background-image: url("../images/icon-checked.svg");
+  background-size: contain;
   background-origin: border-box;
 }
+
+.checkbox-contract-terms {
+  display: inline-block;
+  margin-left: 2px;
+  text-decoration-style: underline solid var(--accent-colour);
+  color: var(--accent-colour);
+}
+
+/* Send button */
 
 .modal-button-send {
   display: flex;
@@ -495,14 +533,16 @@ input::placeholder {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .modal-button-send:hover,
 .modal-button-send:focus {
-  background-color: var(--accent-colour-button-hover);
+  background-color: var(--accent-button-hover-colour);
 }
 
-/* Features styles */
+/* --------Features styles----------- */
 
 .features {
   padding: 94px 0;
@@ -681,7 +721,7 @@ input::placeholder {
   height: 44px;
 
   background-color: var(--bgc-primary);
-  color: var(--colour-item);
+  color: var(--link-nonactive-colour);
 
   border-radius: 50%;
 
@@ -692,7 +732,7 @@ input::placeholder {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-colour);
-  color: var(--icons-colour-hover);
+  color: var(--icons-hover-colour);
 }
 
 .social-link .icon {
@@ -730,9 +770,9 @@ input::placeholder {
   width: 170px;
   height: 92px;
 
-  border: 1px solid var(--colour-item);
+  border: 1px solid var(--link-nonactive-colour);
   border-radius: 4px;
-  color: var(--colour-item);
+  color: var(--link-nonactive-colour);
 
   transition: border 250ms var(--timing-function),
     color 250ms var(--timing-function);
@@ -829,7 +869,7 @@ input::placeholder {
   line-height: 1.714;
   text-decoration: none;
 
-  color: var(--text-colour-contacts-footer);
+  color: var(--text-contacts-footer-colour);
 
   transition: color 250ms var(--timing-function);
 }
@@ -844,7 +884,7 @@ input::placeholder {
   line-height: 1.71;
   text-decoration: none;
 
-  color: var(--text-colour-contacts-footer);
+  color: var(--text-contacts-footer-colour);
 
   transition: color 250ms var(--timing-function);
 }
@@ -887,7 +927,7 @@ input::placeholder {
   height: 44px;
 
   background-color: var(--bgc-footer-network);
-  color: var(--icons-colour-hover);
+  color: var(--icons-hover-colour);
 
   border-radius: 50%;
 
@@ -1065,7 +1105,7 @@ input::placeholder {
 .project-overlay {
   position: absolute;
 
-  background-color: var(--accent-colour-projects-overlay);
+  background-color: var(--accent-projects-overlay-colour);
 
   opacity: 0;
   pointer-events: none;
@@ -1096,7 +1136,7 @@ input::placeholder {
 .project-descr {
   padding: 20px 24px;
 
-  border: 1px solid var(--border-colour-block);
+  border: 1px solid var(--border-projectblock-colour);
   border-top: none;
 }
 
