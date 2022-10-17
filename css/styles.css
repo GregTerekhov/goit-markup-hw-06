@@ -913,7 +913,8 @@ input::placeholder {
   margin-right: 93px;
 }
 
-.socials-title {
+.socials-call {
+  display: block;
   margin-top: 0;
   margin-bottom: 20px;
 
@@ -958,7 +959,8 @@ input::placeholder {
 
 /* Subscription */
 
-.subscription-title {
+.subscription-call {
+  display: block;
   margin-top: 0;
   margin-bottom: 20px;
 
