@@ -1,3 +1,5 @@
+/* General */
+
 :root {
   --accent-colour: #2196f3;
   --accent-button-hover-colour: #188ce8;
@@ -76,7 +78,7 @@ img {
 }
 
 /* -------Header styles--------- */
-
+/* Section */
 .header {
   border-bottom: 1px solid var(--border-header-colour);
 }
@@ -86,6 +88,8 @@ img {
   align-items: center;
   justify-content: space-between;
 }
+
+/* Logotype */
 
 .logotype-top {
   font-family: "Raleway", sans-serif;
@@ -105,6 +109,8 @@ img {
 
   color: var(--text-logo-colour);
 }
+
+/* Link`s list */
 
 .nav-pages {
   display: flex;
@@ -155,6 +161,8 @@ img {
   background-color: var(--accent-colour);
   border-radius: 2px;
 }
+
+/* Feedback */
 
 .feedback {
   display: flex;
@@ -587,7 +595,7 @@ input::placeholder {
   color: var(--text-colour-secondary);
 }
 
-/* Activity styles */
+/* --------Activity styles----------- */
 
 .activity {
   padding-bottom: 94px;
@@ -608,6 +616,8 @@ input::placeholder {
   flex-wrap: wrap;
   gap: 30px;
 }
+
+/* Thumb */
 
 .activity-thumb {
   position: relative;
@@ -645,7 +655,7 @@ input::placeholder {
   color: var(--text-colour-tertiary);
 }
 
-/* Team styles */
+/* ---------Team styles------------ */
 
 .team {
   padding: 94px 0;
@@ -666,6 +676,8 @@ input::placeholder {
   display: flex;
   gap: 30px;
 }
+
+/* Member cards */
 
 .team-member {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -704,7 +716,7 @@ input::placeholder {
   color: var(--text-colour-secondary);
 }
 
-/* Team-social-links styles */
+/* Social links */
 
 .team-social-links-list {
   display: flex;
@@ -741,7 +753,7 @@ input::placeholder {
   transition: fill 250ms var(--timing-function);
 }
 
-/* Clients styles */
+/* ---------Clients styles------------ */
 
 .clients {
   padding: 94px 0;
@@ -788,7 +800,8 @@ input::placeholder {
   fill: currentColor;
 }
 
-/* Footer general styles */
+/* -----------Footer styles------------- */
+/* General */
 
 .cellar {
   padding-top: 60px;
@@ -796,8 +809,6 @@ input::placeholder {
 
   background-color: var(--bgc-secondary);
 }
-
-/* Footer address-group styles */
 
 .footer-information {
   display: flex;
@@ -809,7 +820,7 @@ input::placeholder {
   margin-right: 70px;
 }
 
-/* Footer logotype styles */
+/* Logotype */
 
 .logotype-bottom {
   display: inline-block;
@@ -833,7 +844,7 @@ input::placeholder {
   color: var(--text-colour-tertiary);
 }
 
-/* Footer address group styles */
+/* Address group */
 
 .address {
   font-style: normal;
@@ -894,7 +905,7 @@ input::placeholder {
   color: var(--accent-colour);
 }
 
-/* Footer network styles */
+/* Network links */
 
 .socials {
   margin-right: 93px;
@@ -943,7 +954,7 @@ input::placeholder {
   fill: currentColor;
 }
 
-/* Footer subscription styles */
+/* Subscription */
 
 .subscription-title {
   margin-top: 0;
@@ -982,6 +993,8 @@ input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* Subscription button */
+
 .subscription-button {
   display: inline-flex;
   justify-content: center;
@@ -1018,14 +1031,14 @@ input::placeholder {
   fill: currentColor;
 }
 
-/* ------------------------Portfolio styles---------------------------- */
-/* Projects styles */
+/* =================Portfolio styles================== */
+/* ---------------Projects styles------------------ */
 
 .projects {
   padding: 94px 0;
 }
 
-/* Project-filters styles */
+/* Filters */
 
 .filters-list {
   display: flex;
@@ -1071,7 +1084,7 @@ input::placeholder {
   background-color: var(--accent-colour);
 }
 
-/* Projects` boxes styles */
+/* Boxes */
 
 .projects-list {
   display: flex;
@@ -1101,6 +1114,8 @@ input::placeholder {
   display: flex;
   justify-content: center;
 }
+
+/* Overlay */
 
 .project-overlay {
   position: absolute;
@@ -1132,6 +1147,8 @@ input::placeholder {
 
   color: var(--text-colour-tertiary);
 }
+
+/* Boxes` description */
 
 .project-descr {
   padding: 20px 24px;
